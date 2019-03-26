@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-CONTAINER_NAME="centos7-os"
+CONTAINER_NAME="test-cont"
 
 docker run --detach --privileged --volume /sys/fs/cgroup/:/sys/fs/cgroup:ro --name $CONTAINER_NAME local/$CONTAINER_NAME
 
