@@ -1,0 +1,13 @@
+language: bash
+services:
+- docker
+stages:
+- test
+- build
+jobs:
+  include:
+  - stage: test
+    script:
+      - docker build -t local/centos7-os . 
+      -  "/bin/bash test.sh"
+    if: type = pull_request
